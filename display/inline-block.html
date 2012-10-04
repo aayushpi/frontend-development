@@ -1,22 +1,31 @@
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Display: inline vs block</title>
-        <style>
-        
-            body {
-                font-size:200%;
-            }
-            * {
-                border: solid 1px red;
-            }
-        </style>
-    </head>
-    <body>
-        <div> Div&#38;s default to <em>display:block;</em><div>
-        <div> This div will thus be on its own line</div>
-        <span>span&#39;s default to <em>display:inline;</em></span>
-        <span>This span will be on the same line as its immediate previous sibling</span>
-    </body>
+  
+  <head>
+    <title>Display:inline vs block</title>
+    <meta charset="utf-8" />
+    <style>
+      
+      body {
+        font-size:200%;
+      }
+      
+      div, span {
+        border:solid 1px red;
+        display:inline-block;
+        /* inline does not honor width and height values */
+        width:25%;
+        min-width:320px;
+      }
+      
+    </style>
+  </head>
+  <body>
+  
+    <div>Div&#39;s default to <em>display:block;</em></div>
+    <div>This div will thus be on its own line.</div>
+    <span>span&#39;s default to <em>display:inline;</em></span>
+    <span>This span will be on the same line as its immediate previous sibling</span>
+  </body>
+  
 </html>
