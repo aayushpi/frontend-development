@@ -2,26 +2,28 @@
 <html>
   
   <head>
-    <title>Display:inline vs block</title>
+    <title>Display:block-float</title>
     <meta charset="utf-8" />
     <style>
-      
+      html{
+        display: table;}
       body {
         font-size:200%;
+        display: table-row;
       }
       
       div, span {
         border:solid 1px red;
-        display:inline-block;
-        /* inline does not honor width and height values */
+        display:table-cell;
+        
         width:20%;
-        min-width:300px;
-        vertical-align: top;
+        min-width:200px;
       }
+      
     </style>
   </head>
   <body>
-<!-- The space character is honoured in inline treatment   -->
+  
     <div>Div&#39;s default to <em>display:block;</em></div>
     <div>This div will thus be on its own line.</div>
     <span>span&#39;s default to <em>display:inline;</em></span>
